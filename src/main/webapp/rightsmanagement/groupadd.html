@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>电商平台一期_支撑平台</title>
+	<meta name="viewport" content="">
+	<meta name="description" content="">
+	<meta name="author" content="handpay">
+    <!--引入bootstrap文件-->
+	<link id="bs-css" href="../css/common/bootstrap.css" rel="stylesheet">
+	<link id="bs-css" href="../css/common/bootstrap.min.css" rel="stylesheet">
+    <!--/引入bootstrap文件-->
+    
+    <!--新增-->
+    <link id="bs-css" href="../css/common/index.css" rel="stylesheet">
+    <link id="bs-css" href="../css/common/add.css" rel="stylesheet">
+    <!--/新增-->
+    
+    <!--让ie678识别html标签-->
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+    <!--/让ie678识别html标签-->
+
+    
+</head>
+
+<body>
+    <!-- 头部 -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+                <!--LOGO-->
+				<a class="brand" href="index.html"> <img alt="Charisma Logo" src="../images/hp_logo.png" /></a>
+                <!--/logo-->
+				
+				<div class="btn-group pull-right">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i><span class="hidden-phone">张姗姗</span>
+						<span class="caret"></span>
+					</a>
+				    <!-- 用户下拉｜隐藏 -->
+					<ul class="dropdown-menu">
+						<li><a href="moditypass.html">修改密码</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html">重新登录</a></li>
+						<li class="divider"></li>
+						<li><a href="login-out.html">退出</a></li>
+					</ul>
+				    <!--／ 用户下拉｜隐藏 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ 头部 -->
+    
+    <!--中间-->
+	<div class="container-fluid">
+		<div class="row-fluid">
+				
+			<!-- 左边菜单导航-->
+            <div class="span2 main-menu-span">
+               <div style="position:relative; width:100%; height:0;">
+                  <span class="setting"></span>
+                  
+                   <ul class="right-menu">
+						<li><a href="javascript:void(0)"><input type="checkbox" class="checkbox allshow"/>全部展开</a></li>
+						<li class="divider2"></li>
+						<li><a href="javascript:void(0)"><input type="checkbox" class="checkbox drift"/>浮动前置</a></li>
+						<li class="divider2"></li>
+						<li><a href="1.html">样式库</a></li>
+			      </ul>
+                  
+               </div>
+               <div class="well nav-collapse sidebar-nav" style="overflow:hidden;">
+                  <ul class="main-menu">
+                     <li class="first-menu one"><i class="icon2 icon2-jia"></i>商城管理</li>
+                     <li class="first-menu closed">
+                         <ul>
+                             <li class="second-menu"><a href="../shopmanagement/sortmanagement.html"><i class="icon2-no"></i>分类管理</a></li>
+                             <li class="second-menu"><a href="../shopmanagement/brandmanagement.html"><i class="icon2-no"></i>品牌管理</a></li> 
+                             <li class="second-menu"><a href="../shopmanagement/businesscontractmanagement.html"><i class="icon2-no"></i>商户合同管理</a></li>
+                         </ul>
+                     </li>
+                     <li class="first-menu one"><i class="icon2 icon2-jia"></i>商品管理</li>
+                     <li class="first-menu closed">
+                         <ul>
+                             <li class="second-menu"><a href="1.html"><i class="icon2-no"></i>上架商品</a></li>
+                             <li class="second-menu"><a href="1.html"><i class="icon2-no"></i>下架商品</a></li> 
+                         </ul>
+                    </li>
+                    <li class="first-menu one"><i class="icon2 icon2-jia"></i>订单管理</li>
+                    <li class="first-menu closed">
+                         <ul>
+                             <li class="second-menu"><a href="1.html"><i class="icon2-no"></i>订单管理</a></li>
+                         </ul>
+                    </li>
+                     <li class="first-menu one"><i class="icon2 icon2-jian"></i>权限管理</li>
+                     <li class="first-menu opened">
+                         <ul>
+                             <li class="second-menu selected"><a href="../rightsmanagement/groupmanagement.html"><i class="icon2-no"></i>组管理</a></li>
+                             <li class="second-menu"><a href="../rightsmanagement/usersmanagement.html"><i class="icon2-no"></i>用户管理</a></li>
+                         </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+			<!-- /左边菜单导航 -->
+			
+			<!--用户不支持脚本的时候-->
+            <noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">友情提示</h4>
+					<p>对不起，您需要启用浏览器的脚本支持。</p>
+				</div>
+			</noscript>
+			<!--/用户不支持脚本的时候-->
+			
+            <!--右边部分-->
+			<div id="content" class="span10">
+			    <!--面包屑-->
+			    <div>
+				   <ul class="breadcrumb">
+					  <li>
+						<a href="#">权限管理</a> <span class="divider">/</span>
+					  </li>
+					  <li>
+						<a href="groupmanagement.html">组管理</a> <span class="divider">/</span>
+				   	  </li>
+					  <li>
+						<a href="#">添加新组</a>
+				   	  </li>
+				   </ul>
+			    </div>
+                <!--/面包屑-->
+                
+                <!--块-->
+		        <div class="box">
+                    <div class="box-header well">
+					  <h2>添加新组<font size="-2">（ *为必填项 ）</font></h2>
+						<div class="box-icon">
+						  <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+						</div>
+				    </div>
+                    <div class="box-content" style="display:block; ">
+                    <form class="bs-docs-example form-horizontal" action="" name="form" method="post">
+                        <br>
+                        <div class="control-group">
+                            <label class="control-label">组名称：*</label>
+                            <div class="controls">
+                               <input type="text" placeholder=""><span class="help-inline">输入组名称</span>
+                            </div>
+                        </div>
+                        <!--div class="control-group">
+                            <label class="control-label">组类型：*</label>
+                            <div class="controls">
+                                   <input class="dropdown-input" placeholder="点击选择" type="text" readonly><i class="icon3-down"></i>
+                                   <ul class="dropdown-list">
+                                     <li><a href="#">瀚银支撑</a></li>
+                                     <li><a href="#">商户</a></li>
+                                   </ul>
+                                   <span class="help-inline">选择组所属类型</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+							<label class="control-label" for="selectError2">商户代码：*</label>
+							<div class="controls">
+								<select data-placeholder="点击选择" id="selectError2" data-rel="chosen">
+										<option value=""></option>
+										<optgroup label="">
+										  <option>546354536345</option>
+										  <option>783546545646</option>
+										  <option>786744554635</option>
+										  <option>777563746543</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>786535445345</option>
+										  <option>275690832055</option>
+										  <option>097603284575</option>
+										  <option>093752850345</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>098435934863</option>
+										  <option>888342508723</option>
+										  <option>097304857043</option>
+										  <option>983495873495</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>546354536345</option>
+										  <option>783546545646</option>
+										  <option>786744554635</option>
+										  <option>777563746543</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>786535445345</option>
+										  <option>275690832055</option>
+										  <option>097603284575</option>
+										  <option>093752850345</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>098435934863</option>
+										  <option>888342508723</option>
+										  <option>097304857043</option>
+										  <option>983495873495</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>546354536345</option>
+										  <option>783546545646</option>
+										  <option>786744554635</option>
+										  <option>777563746543</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>786535445345</option>
+										  <option>275690832055</option>
+										  <option>097603284575</option>
+										  <option>093752850345</option>
+										</optgroup>
+										<optgroup label="">
+										  <option>098435934863</option>
+										  <option>888342508723</option>
+										  <option>097304857043</option>
+										  <option>983495873495</option>
+										</optgroup>
+							  </select><span class="help-inline">选择商户代码</span>
+							</div>
+					    </div-->
+                        <div class="control-group">
+                            <label class="control-label">权限分配：*</label>
+                            <div class="controls textshow">
+                               <span class="label label-success" id="label-success">已设置</span>
+                               <span class="label label-important" id="label-important">未设置</span>
+                               <a href="#sort-select" class="btn" data-toggle="modal" id="eg2">分配权限</a>
+                               <span class="help-inline">点击分配权限</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">保存</button>&nbsp;&nbsp;
+                            <button class="btn back">返回</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <!--/块-->
+                
+			    
+		  </div>
+            <!--/右边部分-->
+		</div>
+        <!--/中间-->
+        <hr>
+        <!--底部-->
+		<footer>
+			<p class="pull-left">&copy; <a href="http://www.handpay.com.cn" target="_blank">handpay.com.cn</a> 2013</p>
+			<p class="pull-right">Powered by: <a href="http://www.handpay.com.cn">瀚银信息技术有限公司</a></p>
+		</footer>
+        <!--/底部-->
+		
+	</div>
+
+<!-- 属性弹出 -->
+<div id="sort-select" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">分配权限</h3>
+  </div>
+  <div class="modal-body">
+    <div class="sort-s-button">
+        <button class="btn btn-mini" type="button">全选</button>  
+        <button class="btn btn-mini" type="button">反选</button>  
+        <button class="btn btn-mini" type="button">清空</button>
+    </div>
+    <div class="sort-s-post" id="ul">
+       <ul>
+         <li class="t1"><label class="checkbox inline"><input type="checkbox" id="inlineCheckbox1" value="1" name="sortname"> 商品管理</label></li>
+         <li class="t2"><i class="icon2-turn"></i><label class="checkbox inline"><input type="checkbox" id="inlineCheckbox2" value="1" name="sortname"> 出售中的商品</label></li>
+         <li class="t1"><i class="icon2-no"></i><i class="icon2-turn"></i>
+                                                  <label class="checkbox inline"><input type="checkbox" id="inlineCheckbox3" value="1" name="sortname"> 下架</label> 
+                                                  <label class="checkbox inline"><input type="checkbox" id="inlineCheckbox3" value="1" name="sortname"> 设置热销</label> 
+                                                  <label class="checkbox inline"><input type="checkbox" id="inlineCheckbox3" value="1" name="sortname"> 设置新品</label>
+                                                  <label class="checkbox inline"><input type="checkbox" id="inlineCheckbox3" value="1" name="sortname"> 设置渠道</label>
+          </li>
+         <li class="t2"><i class="icon2-turn"></i><label class="checkbox inline"><input type="checkbox" id="inlineCheckbox1" value="1" name="sortname"> 添加商品</label></li>
+         <li class="t1"><i class="icon2-turn"></i><label class="checkbox inline"><input type="checkbox" id="inlineCheckbox2" value="1" name="sortname"> 仓库中的商品</label></li>
+       </ul>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" onclick="document.getElementById('eg2').textContent='重新分配权限';document.getElementById('label-success').style.display='inline-block';document.getElementById('label-important').style.display='none'";>确定</button>
+  </div>
+</div>
+   
+</body>
+</html>
+<!--需要在页尾加载的js-->
+	<script src="../js/jquery-1.7.2.min.js"></script>
+    <!--script src="../js/bootstrap.js"></script-->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/jquery.history.js"></script>
+	<script src="../js/charisma.js"></script>
+    <script src="../js/newadd20130115.js"></script>
+    <script src="../js/meteora.js"></script>
+    <script src="../js/rightsmanagement/groupadd.js"></script>
+    
+ <!--选择可输入组件-->
+    <link href="../css/common/chosen.css" rel="stylesheet"/>
+    <link href="../css/common/uniform.default.css" rel="stylesheet"/>
+    <script src="../js/jquery.chosen.min.js"></script>
+    <script src="../js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="../js/bootstrap-transition.js"></script>
+	<script src="../js/jquery.uniform.min.js"></script>
+	<script src="../js/jquery.cleditor.min.js"></script>
+    
+
+    <link id="bs-css" href="../css/rightsmanagement/groupadd.css" rel="stylesheet">

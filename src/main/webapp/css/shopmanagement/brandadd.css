@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+.help-inline{ color:#CCC; font-size:13px; font-family:"宋体";}
+.sort-s-button{ margin-top:-6px; padding-bottom:14px;}
+.sort-s-post{ height:auto;}
+.sort-s-post ul{list-style-type:none; margin-top:10px; margin-left:0px;}
+.sort-s-post ul li{ line-height:22px; display:block; overflow:hidden;}
+.sort-s-post ul li.t1 {background-color:#f8f8f8; padding-left:4px;}/* 第一行的背景色 */
+.sort-s-post li.t2{background-color:#ffffff; padding-left:4px;}/* 第二行的背景色 */
+.sort-s-post li.t3 {background-color:#007fc4; color:#FFF; padding-left:4px;}/* 鼠标经过时的背景色 */
+
+.icon2-turn{ background:url(../../img/hp_icon.png) no-repeat -80px 0px; float:left; width:16px; margin-left:4px; height:30px;
+-moz-opacity:0.2;
+-khtml-opacity: 0.2;
+opacity: 0.2;}
+.icon2-no{width:11px}

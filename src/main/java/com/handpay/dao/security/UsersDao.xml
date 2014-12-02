@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.handpay.dao.security.UsersDao">  
+    
+    <!-- 获取用户，根据username -->  
+    <select id="findByName" parameterType="String" resultType="com.handpay.entity.security.Users" >  
+            select * from security_users t where t.account = #{username}
+    </select>
+	   
+    <!-- 插入用户 自动主键-->  
+	<insert id="addUser" parameterType="com.handpay.entity.security.Users" keyProperty="id">  
+	    <selectKey keyProperty="id" resultType="int" order="BEFORE">  
+	        select nextval('SEQ_SECURITY_USERS')  
+	    </selectKey>  
+	    INSERT INTO security_users  
+	    VALUES (#{id},  
+	            #{account},  
+	            #{username},  
+	            #{password},  
+	            #{status},  
+	            #{descn})  
+	</insert> 
+	
+	<!-- 更新用户信息 -->  
+	<update id="setUser" parameterType="com.handpay.entity.security.Users">  
+	        UPDATE security_users u  
+	            SET u.account = #{account},   
+	                u.username = #{username},  
+	                u.password = #{password},  
+	                u.descn = #{descn},  
+	                u.status = #{status}  
+	         WHERE u.id = #{id};     
+	</update> 
+	
+	<!-- 删除用户 -->  
+	<update id="delUser" parameterType="int">  
+	        UPDATE security_users u  
+	            SET u.status = 0  
+	         WHERE u.id = #{id};     
+	</update> 
+	
+	<!-- 更改用户密码 -->  
+	<update id="setPassword">  
+	        UPDATE security_users u  
+	            SET u.password = #{password},  
+	         WHERE u.id = #{id};     
+	</update> 
+</mapper> 

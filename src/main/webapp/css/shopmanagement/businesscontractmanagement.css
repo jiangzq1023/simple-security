@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+.add-big{ padding-top:6px; padding-bottom:10px;}
+.table .search-query2 {
+padding-right: 14px;
+padding-right: 4px 9;
+padding-left: 14px;
+padding-left: 4px 9;
+margin-bottom: 0;
+-webkit-border-radius:0px;
+-webkit-border-top-left-radius:15px;
+-webkit-border-bottom-left-radius:15px;
+-webkit-border-radius:0px;
+-moz-border-radius-topleft:15px;
+-moz-border-radius-bottomleft:15px;
+border-radius: 15px 0px 0px 15px;}
+
+.help-inline{color:#CCC; font-size:13px; font-family:"宋体"}
+

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+.icon2-turn{ background:url(../img/hp_icon.png) no-repeat -80px 0px; float:left; width:16px; height:30px;
+-moz-opacity:0.2;
+-khtml-opacity: 0.2;
+opacity: 0.2;}
+.table input{ margin-bottom:0;}
+.sort-add{ display:block; float:left; background:url(../img/hp_icon.png) no-repeat -118px 0px; width:28px; height:30px; cursor:pointer;}
+.sort-add-re{background-position:-145px 0px;}
+.no{ display:none;}
+.sort-up{display:block; float:left; background:url(../img/hp_icon.png) no-repeat -180px 0px; width:16px; height:16px; cursor:pointer; margin-left:6px; margin-top:7px;}
+.sort-down{display:block; float:left; background:url(../img/hp_icon.png) no-repeat -199px 0px; width:16px; height:16px; cursor:pointer; margin-left:6px; margin-top:7px;}
+.sort-del{display:block; float:left; background:url(../img/hp_icon.png) no-repeat -217px 0px; width:16px; height:16px; cursor:pointer; margin-left:6px; margin-top:8px;}
+.sort-property,.sort-channel{ line-height:30px;}
+.add-big{ padding-top:6px; padding-bottom:10px;}

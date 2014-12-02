@@ -1,0 +1,15 @@
+@charset "utf-8";
+/*让IE6 7 8 支持渐变、圆角、阴影*/
+body{behavior: url(../../js/PIE.htc);}
+*{behavior: url(../../js/PIE.htc);}
+
+.img-rounded {
+  -pie-border-radius: 6px;	
+}
+.img-polaroid {
+-pie-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);}
+.img-circle {
+  -pie-border-radius: 500px;}
+pre {
+  -pie-border-radius: 3px;
+}

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>电商平台一期_支撑平台</title>
+	<meta name="viewport" content="">
+	<meta name="description" content="">
+	<meta name="author" content="handpay">
+    <!--引入bootstrap文件-->
+	<link id="bs-css" href="../css/common/bootstrap.css" rel="stylesheet">
+	<link id="bs-css" href="../css/common/bootstrap.min.css" rel="stylesheet">
+    <!--/引入bootstrap文件-->
+    
+    <!--新增-->
+    <link id="bs-css" href="../css/common/index.css" rel="stylesheet">
+    <link id="bs-css" href="../css/common/add.css" rel="stylesheet">
+    <link id="bs-css" href="../css/shopmanagement/sortmanagement.css" rel="stylesheet">
+    <!--/新增-->
+    
+    <!--让ie678识别html标签-->
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+    <!--/让ie678识别html标签-->
+
+    
+</head>
+
+<body>
+    <!-- 头部 -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+                <!--LOGO-->
+				<a class="brand" href="index.html"> <img alt="Charisma Logo" src="../images/hp_logo.png" /></a>
+                <!--/logo-->
+				
+				<div class="btn-group pull-right">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i><span class="hidden-phone">张姗姗</span>
+						<span class="caret"></span>
+					</a>
+				    <!-- 用户下拉｜隐藏 -->
+					<ul class="dropdown-menu">
+						<li><a href="moditypass.html">修改密码</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html">重新登录</a></li>
+						<li class="divider"></li>
+						<li><a href="login-out.html">退出</a></li>
+					</ul>
+				    <!--／ 用户下拉｜隐藏 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ 头部 -->
+    
+    <!--中间-->
+	<div class="container-fluid">
+		<div class="row-fluid">
+				
+			<!-- 左边菜单导航-->
+            <div class="span2 main-menu-span">
+               <div style="position:relative; width:100%; height:0;">
+                  <span class="setting"></span>
+                  
+                   <ul class="right-menu">
+						<li><a href="javascript:void(0)"><input type="checkbox" class="checkbox allshow"/>全部展开</a></li>
+						<li class="divider2"></li>
+						<li><a href="javascript:void(0)"><input type="checkbox" class="checkbox drift"/>浮动前置</a></li>
+						<li class="divider2"></li>
+						<li><a href="1.html">样式库</a></li>
+			      </ul>
+                  
+               </div>
+               <div class="well nav-collapse sidebar-nav" style="overflow:hidden;">
+                  <ul class="main-menu">
+                     <li class="first-menu one"><i class="icon2 icon2-jian"></i>商城管理</li>
+                     <li class="first-menu opened">
+                         <ul>
+                             <li class="second-menu selected"><a href="../shopmanagement/sortmanagement.html"><i class="icon2-no"></i>分类管理</a></li>
+                             <li class="second-menu"><a href="../shopmanagement/brandmanagement.html"><i class="icon2-no"></i>品牌管理</a></li> 
+                             <li class="second-menu"><a href="../shopmanagement/businesscontractmanagement.html"><i class="icon2-no"></i>商户合同管理</a></li>
+                         </ul>
+                     </li>
+                     <li class="first-menu one"><i class="icon2 icon2-jia"></i>商品管理</li>
+                     <li class="first-menu closed">
+                         <ul>
+                             <li class="second-menu"><a href="1.html"><i class="icon2-no"></i>上架商品</a></li>
+                             <li class="second-menu"><a href="1.html"><i class="icon2-no"></i>下架商品</a></li> 
+                         </ul>
+                    </li>
+                    <li class="first-menu one"><i class="icon2 icon2-jia"></i>订单管理</li>
+                    <li class="first-menu closed">
+                         <ul>
+                             <li class="second-menu"><a href="1.html"><i class="icon2-no"></i>订单管理</a></li>
+                         </ul>
+                    </li>
+                    <li class="first-menu one"><i class="icon2 icon2-jia"></i>权限管理</li>
+                    <li class="first-menu closed">
+                         <ul>
+                             <li class="second-menu"><a href="../rightsmanagement/groupmanagement.html"><i class="icon2-no"></i>组管理</a></li>
+                             <li class="second-menu"><a href="../rightsmanagement/usersmanagement.html"><i class="icon2-no"></i>用户管理</a></li>
+                         </ul>
+                    </li>
+                  </ul>
+               </div>
+            </div>
+			<!-- /左边菜单导航 -->
+			
+			<!--用户不支持脚本的时候-->
+            <noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">友情提示</h4>
+					<p>对不起，您需要启用浏览器的脚本支持。</p>
+				</div>
+			</noscript>
+			<!--/用户不支持脚本的时候-->
+			
+            <!--右边部分-->
+			<div id="content" class="span10">
+			    <!--面包屑-->
+			    <div>
+				   <ul class="breadcrumb">
+					  <li>
+						<a href="#">商城管理</a> <span class="divider">/</span>
+					  </li>
+					  <li>
+						<a href="#">分类管理</a>
+				   	  </li>
+				   </ul>
+			    </div>
+                <!--/面包屑-->
+                
+                <!--块-->
+		      <div class="box">
+                    <div class="box-header well">
+					  <h2>分类管理</h2>
+						<div class="box-icon">
+						  <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+						</div>
+				    </div>
+                <div class="box-content" style="display:block; ">
+                    <div class="alert alert-success" style="display:none">
+                          删除成功！
+                    </div>
+                    <!--div class="alert alert-error">
+                          错误提示信息
+                    </div-->
+                    <!--div class="alert alert-info">
+                         描述提示信息
+                    </div-->
+            <div class="add-big">
+              <button type="button" class="btn btn-primary big-sort"><i class="icon-plus icon-white"></i> 添加大分类</button> 
+              <a href="#" id="all-set">收起所有分类</a>
+            </div>
+		    <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th width="45%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分类</th>
+                  <th width="9%">添加子分类</th>
+                  <th width="8%">前台展示</th>
+                  <th width="12%">操作</th>
+                  <th width="12%">销售属性</th>
+                  <th width="14%">业务渠道</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">
+               <table width="100%" class="table2">
+                <tr>
+                  <td width="45%"><i class="icon-minus-sign icon2-o"></i> <input type="text" placeholder="" value="3C数码"></td>
+                  <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                  <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                  <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                  <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                  <td width="14%"><a class="btn btn-mini" href="#sales-select" data-toggle="modal">管理业务渠道</a></td>
+                </tr>
+                <tr>
+                  <td width="45%"><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="手机通讯"></td>
+                  <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                  <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                  <td width="12%"><i class="icon2-no"></i><i class="icon2-no"></i>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                  <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                  <td width="14%"></td>
+                </tr>
+                <tr>
+                  <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="手机"></td>
+                  <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                  <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                  <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                  <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                  <td width="14%"></td>
+                </tr>
+                <tr>
+                  <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="输入分类名" value=""></td>
+                  <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                  <td width="8%"></td>
+                  <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                  <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                  <td width="14%"></td>
+                </tr>
+              </table>
+                  </td>
+                </tr>
+                
+                
+                <tr>
+                  <td colspan="6">
+               <table width="100%" class="table2" border="0"><thead>
+                <tr>
+                   <td width="45%"><i class="icon-minus-sign icon2-o"></i> <input type="text" placeholder="" value="服装"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"><a class="btn btn-mini" href="#sales-select" data-toggle="modal">管理业务渠道</a></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="男装"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><i class="icon2-no"></i><i class="icon2-no"></i>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="上衣"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="输入分类名" value=""></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr></thead>
+              </table>
+                  </td>
+                </tr>
+                
+                
+                <tr>
+                  <td colspan="6">
+               <table width="100%" class="table2" border="0">
+                <tr>
+                   <td width="45%"><i class="icon-minus-sign icon2-o"></i> <input type="text" placeholder="" value="3C数码"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"><a class="btn btn-mini" href="#sales-select" data-toggle="modal">管理业务渠道</a></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="手机通讯"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><i class="icon2-no"></i><i class="icon2-no"></i>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="手机"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="输入分类名" value=""></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+              </table>
+                  </td>
+                </tr>
+                
+                
+                <tr>
+                  <td colspan="6">
+               <table width="100%" class="table2"><thead>
+                <tr>
+                   <td width="45%"><i class="icon-minus-sign icon2-o"></i> <input type="text" placeholder="" value="服装"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"><a class="btn btn-mini" href="#sales-select" data-toggle="modal">管理业务渠道</a></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="男装"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><i class="icon2-no"></i><i class="icon2-no"></i>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="" value="上衣"></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"><label class="checkbox"><input type="checkbox"></label></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr>
+                <tr>
+                   <td width="45%"><i class="icon2-no"></i><i class="icon2-no"></i><i class="icon2-turn"></i><input type="text" placeholder="输入分类名" value=""></td>
+                   <td width="9%"><a href="javascript:void(0)" class="btn btn-success btn-mini"><i class="icon-plus icon-white"></i></a></td>
+                   <td width="8%"></td>
+                   <td width="12%"><a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-up"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-arrow-down"></i></a> <a href="javascript:void(0)" class="btn btn-mini"><i class="icon-remove"></i></a></td>
+                   <td width="12%"><a class="btn btn-mini" data-toggle="modal" href="#set">销售属性</a></td>
+                   <td width="14%"></td>
+                </tr></thead>
+              </table>
+                  </td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+             <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large span2">保存</button>
+                            <button class="btn btn-large span2" type="button">取消</button>
+            </div>
+          </div>
+         <!--/块-->
+                
+			    
+		  </div>
+            <!--/右边部分-->
+		</div>
+        <!--/中间-->
+        <hr>
+        <!--底部-->
+		<footer>
+			<p class="pull-left">&copy; <a href="http://www.handpay.com.cn" target="_blank">handpay.com.cn</a> 2013</p>
+			<p class="pull-right">Powered by: <a href="http://www.handpay.com.cn">瀚银信息技术有限公司</a></p>
+		</footer>
+        <!--/底部-->
+		
+	</div>
+
+<!-- 属性弹出 -->
+<div id="set" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="max-height:500px; overflow:auto;top:10%">
+  <div class="modal-header">
+    <ul class="nav nav-tabs ulmore" style="margin-bottom:0;" id="myTab">
+      <li class="active"><i class='icon-remove-sign del-position'></i><a href="#tab1" data-toggle="tab">机身颜色</a></li>
+      <li><a href="#tab2" data-toggle="tab">手机套餐</a></li>
+      <li style="float:right; position:relative;" class="addnew"><button class="btn btn-primary btn-mini new-add-big">新增销售属性</button>
+                <!--i class="icon-forward imore"></i>
+                <i class="imore-re">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                <ul class="li-ul-more">
+                   <li><a href="#">超出部分属性</a></li>
+                   <li><a href="#">这里是</a></li>
+                   <li><a href="#">超出部分</a></li>
+                   <li><a href="#">隐藏起来</a></li>
+                   <li><a href="#">的属性</a></li>
+                   <li><a href="#">最大高度为</a></li>
+                   <li><a href="#">250px超出了</a></li>
+                   <li><a href="#">就显示滚动条</a></li>
+                   <li><a href="#">可以滚动</a></li>
+                   <li><a href="#">查看隐藏属性</a></li>
+                </ul------这里为超出部分属性，判断超出后显示-------->
+      </li>
+    </ul>
+ 
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane" id="tab0">没有数据，请添加</div>
+      <div class="tab-pane active" id="tab1">
+        <table class="table table-striped" style="margin-bottom:5px;">
+           <thead>
+             <tr>
+                <th width="50%">颜色</th>
+                <th width="50%">操作</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+                <td width="50%"><i class="colors" style="background: #4E9EE9"></i> 天蓝色</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr>
+                <td width="50%"><i class="colors" style="background:#f60"></i> 菊红色</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr>
+                <td width="50%"><i class="colors" style="background:#393"></i> 绿色</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr>
+                <td width="50%"><i class="colors" style="background:#93C"></i> 紫色</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr id="newadd">
+                <td width="50%"><div class="input-append emed"><input type="text" class="span2 val2" placeholder="输入属性名并选择颜色" id="color" name="color"><button type="button" class="btn subm">确定</button><div id="colorpicker"></div></div></td>
+                <td width="50%">
+                    <a class="btn btn-mini icon2-o" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini icon2-o" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+           </tbody>
+        </table>
+        <div align="left"><a href="#" class="btn btn-mini newadd"><i class="icon-plus-sign opacity"></i> 新增属性值</a></div>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <table class="table table-striped" style="margin-bottom:5px;">
+           <thead>
+             <tr>
+                <th width="50%">套餐类型</th>
+                <th width="50%">操作</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+                <td width="50%">88元/月</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr>
+                <td width="50%">188元/月</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr>
+                <td width="50%">388元/月</td>
+                <td width="50%">
+                    <a class="btn btn-mini re-name" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+             <tr style="display:none">
+                <td width="50%"><div class="input-append emed"><input type="text" class="span2 val2" placeholder="输入套餐类型"/><button type="button" class="btn subm2">确定</button></div></td>
+                <td width="50%">
+                    <a class="btn btn-mini icon2-o" href="#"><i class="icon-tags"></i> 重命名</a>
+                    <a class="btn btn-danger btn-mini icon2-o" href="#"><i class="icon-trash icon-white"></i> 删除</a></td>
+             </tr>
+           </tbody>
+        </table>
+        <div align="left"><a href="#" class="btn btn-mini newadd2"><i class="icon-plus-sign opacity"></i> 新增套餐</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">保存</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+  </div>
+</div>
+ 
+<!-- 业务渠道属性弹出 --> 
+<div id="sales-select" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="max-height:500px; overflow:auto;">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">选择分类显示的业务渠道</h3>
+  </div>
+  <div class="modal-body">
+      <table class="table table-striped table-hover table-bordered table-condensed" style="margin-bottom:5px;">
+           <thead>
+             <tr>
+                <th width="45"><label class="checkbox inline"><input type="checkbox" id="all">全选</label></th>
+                <th>业务渠道类型</th>
+                <th>业务渠道代码</th>
+                <th>业务渠道名称</th>
+             </tr>
+           </thead>
+           <tbody id="check-box">
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>CCB</td>
+                <td>建设银行-总行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>BCOM</td>
+                <td>交通银行-总行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>CMB</td>
+                <td>招商银行-总行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>ABC</td>
+                <td>农业银行-总行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>SPDB</td>
+                <td>浦发银行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>CIB</td>
+                <td>兴业银行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>CITIC</td>
+                <td>中信银行-总行</td>
+             </tr>
+             <tr>
+                <td><label class="checkbox inline"><input type="checkbox" id="" value="1"></label></td>
+                <td>B2C</td>
+                <td>SRCB</td>
+                <td>上海农商行</td>
+             </tr>
+             <tr>
+                <td colspan="4"><label class="checkbox" style="padding-left:2px; margin-bottom:0"><input type="button" id="getall" class="btn btn-mini" value="全选"/> <input type="button" class="btn btn-mini" id="inverse" value="反选"/> <input type="button" class="btn btn-mini" id="loseall" value="清空"/></label></td>
+             </tr>
+           </tbody>
+      </table>
+  </div>
+  <div class="modal-footer">
+       <button class="btn btn-primary" data-dismiss="modal"><font><font>保存</font></font></button>
+       <button class="btn" data-dismiss="modal"><font><font>取消</font></font></button>
+  </div>
+</div>
+     
+</body>
+</html>
+<!--需要在页尾加载的js-->
+	<script src="../js/jquery-1.7.2.min.js"></script>
+    <!--script src="../js/bootstrap.js"></script-->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/jquery.history.js"></script>
+    <script type='text/javascript' src='../js/farbtastic.min.js'></script>
+    <script type="text/javascript">$(document).ready(function(){$('#colorpicker').farbtastic('#color');$('#colorpicker-re').farbtastic('#color-re');});</script>
+	<!--script src="../js/charisma.js"></script-->
+    <script src="../js/newadd20130115.js"></script>
+    
+ <!--new add js-->
+    <script src="../js/sortmanagement/sortmanagement.js"></script>
+	<script src="../js/bootstrap-tab.js"></script>
